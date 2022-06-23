@@ -1,0 +1,16 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+      "isolatedModules": false,
+      "jsx": "react-jsx",
+    },
+    "exclude": [
+      "node_modules",
+      "**/*.spec.ts",
+      "**/*.stories.{ts,tsx,js,jsx}",
+      "./test/**",
+      "./src/mocks/**"
+    ],
+    "include": ["src"]
+  }
+  
