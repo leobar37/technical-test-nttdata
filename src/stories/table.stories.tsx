@@ -11,7 +11,7 @@ export default {
 
 export const Normal: Story = (args: SafeAny) => {
   const columns = ["Nombre", "Imagen", "Ataque", "Defensa"];
-  const data = Array.from({ length: 10 }).map((_) => [
+  const data = Array.from({ length: 10 }).map(() => [
     "Ivysaus",
     "",
     "65",

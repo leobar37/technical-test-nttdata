@@ -1,15 +1,13 @@
-import { Stack, Table } from "@App/ui";
+import { LoadingTable, useConfirm } from "@App/components";
+import { Stack, Table, Text } from "@App/ui";
 import { getToken } from "@App/utils";
 import styled from "@emotion/styled";
-import { FC, Fragment, useMemo } from "react";
+import { FC, useMemo } from "react";
 import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
+import { toast } from "react-toastify";
+import { useDeletePokemonMuatation } from "../../controllers";
 import { useMantainModal } from "../../domain/store";
 import { Pokemon } from "../../domain/types";
-import { useDeletePokemonMuatation } from "../../controllers";
-import { useConfirm } from "@App/components";
-import { toast } from "react-toastify";
-import { LoadingTable } from "@App/components";
-import { Text } from "@App/ui";
 type PokemonsTableProps = {
   data: Pokemon[];
   isLoading?: boolean;

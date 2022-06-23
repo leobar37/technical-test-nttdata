@@ -26,7 +26,7 @@ const createPokemon = () => {
 
 export const mockLisPokemons = (options: Options) => {
   return rest.get(URL_API_POKEMON, async (req, res, ctx) => {
-    const pokemons = Array.from({ length: options.results }).map((_) =>
+    const pokemons = Array.from({ length: options.results }).map(() =>
       createPokemon()
     );
     await sleep(options.delay);
